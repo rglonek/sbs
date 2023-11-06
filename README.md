@@ -35,8 +35,7 @@ Benchmark                                Runs             Speed             Allo
 BenchmarkByteSliceToString-16            1000000000       0.2426 ns/op      0 B/op       0 allocs/op    15.8x
 BenchmarkByteSliceToStringAlt-16         1000000000       0.4315 ns/op      0 B/op       0 allocs/op     8.9x
 BenchmarkByteSliceToStringStandard-16    310850160        3.847 ns/op       0 B/op       0 allocs/op       -
-BenchmarkStringToByteSlice-16            1000000000       0.2408 ns/op      0 B/op       0 allocs/op    16.7x
-BenchmarkStringToByteSliceAlt-16         1000000000       0.3538 ns/op      0 B/op       0 allocs/op    11.4x
+BenchmarkStringToByteSlice-16            1000000000       0.3538 ns/op      0 B/op       0 allocs/op    11.4x
 BenchmarkStringToByteSliceStandard-16    301289979        4.027 ns/op       0 B/op       0 allocs/op       -
 ```
 
@@ -46,5 +45,4 @@ BenchmarkStringToByteSliceStandard-16    301289979        4.027 ns/op       0 B/
 r := ByteSliceToString([]byte{'t', 'e', 's', 't', 'i', 'n', 'g'})
 r := ByteSliceToStringAlt([]byte{'t', 'e', 's', 't', 'i', 'n', 'g'})
 r := StringToByteSlice("testing")
-r := StringToByteSliceAlt("testing")
 ```

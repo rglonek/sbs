@@ -23,12 +23,6 @@ func TestStringToByteSlice(t *testing.T) {
 	}
 }
 
-func TestStringToByteSliceAlt(t *testing.T) {
-	if r := StringToByteSliceAlt("testing"); !bytes.Equal(r, []byte{'t', 'e', 's', 't', 'i', 'n', 'g'}) {
-		t.FailNow()
-	}
-}
-
 func BenchmarkByteSliceToString(b *testing.B) {
 	arr := []byte{'t', 'e', 's', 't', 'i', 'n', 'g'}
 	b.ResetTimer()
@@ -58,14 +52,6 @@ func BenchmarkStringToByteSlice(b *testing.B) {
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
 		StringToByteSlice(str)
-	}
-}
-
-func BenchmarkStringToByteSliceAlt(b *testing.B) {
-	str := "testing"
-	b.ResetTimer()
-	for n := 0; n < b.N; n++ {
-		StringToByteSliceAlt(str)
 	}
 }
 
